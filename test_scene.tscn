@@ -1,6 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cxlklyigxjprc"]
 
 [ext_resource type="Script" path="res://Camera3D.cs" id="1_ofqov"]
+[ext_resource type="PackedScene" uid="uid://utskkdd66ks6" path="res://Assets/Fountain.blend" id="2_rplcj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tcu7r"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -24,8 +25,6 @@ glow_enabled = true
 [sub_resource type="PlaneMesh" id="PlaneMesh_6cts8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kyjs3"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_8dl44"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -72,6 +71,5 @@ skeleton = NodePath("../..")
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -1.3, 0)
 shape = SubResource("BoxShape3D_kyjs3")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.08755)
-mesh = SubResource("CylinderMesh_8dl44")
+[node name="Fountain" parent="." instance=ExtResource("2_rplcj")]
+transform = Transform3D(0.700413, 0, 0, 0, 0.701488, 0, 0, 0, 0.699209, 0.00826448, -0.214703, 0.0650079)
